@@ -10,3 +10,9 @@
 /typo3temp/
 /typo3conf/autoload/
 /typo3conf/sites/
+/typo3conf/system/
+/typo3conf/PackageStates.php
+/fileadmin/
+
+symlinks.php
+
