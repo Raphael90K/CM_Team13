@@ -14,9 +14,13 @@
 /typo3conf/ext/bootstrap_package/
 /typo3conf/ext/introduction/
 /typo3conf/PackageStates.php
-/fileadmin/
 
 symlinks.php
 
 
 
+/fileadmin/_processed_/
+/fileadmin/_temp_/
+/fileadmin/images/
+/fileadmin/introduction/
+/fileadmin/user_upload/
