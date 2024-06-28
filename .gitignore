@@ -43,3 +43,4 @@ symlinks.php
 /typo3conf/ext/bootstrap_package/Resources/Private/Source/
 /typo3conf/ext/bootstrap_package/Resources/Private/Templates/
 /typo3conf/ext/bootstrap_package/Resources/Public/
+/typo3conf/ext/ods_osm/Resources/Public/JavaScript/Leaflet/leaflet-geosearch/
