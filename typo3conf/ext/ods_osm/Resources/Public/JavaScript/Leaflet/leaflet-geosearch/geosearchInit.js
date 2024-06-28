@@ -1,8 +1,14 @@
 const provider = new GeoSearch.OpenStreetMapProvider();
 const search = new GeoSearch.GeoSearchControl({
     provider: provider,
-    notFoundMessage: 'Adresse wurde leider nicht gefunden.',
+    notFoundMessage: 'Ihre eingegebene Adresse wurde leider nicht gefunden.',
     style: 'bar',
+    searchLabel: 'Adresse eingeben',
+    marker: {
+        // optional: L.Marker    - default L.Icon.Default
+        icon: new L.Icon.Default(),
+        draggable: false,
+    },
 });
 
 
@@ -80,9 +86,22 @@ function processLocation(ev) {
     locationDistanceElement.innerHTML = formatDistanceString(distance, name)
 }
 
+function createUniPin() {
+
+    let UniPin = L.icon({
+        iconUrl: '/fileadmin/logo/LogoPin.png',
+
+        iconSize: [38, 61], // size of the icon
+        iconAnchor: [22, 60], // point of the icon which will correspond to marker's location
+        popupAnchor: [-3, -50] // point from which the popup should open relative to the iconAnchor
+    });
+    L.marker([lat1, lon1], {icon: UniPin}).addTo(osm_347).bindPopup("Universität Trier");
+}
+
 function initGeosearch() {
     osm_347.addControl(search);
     osm_347.on('geosearch/showlocation', processLocation);
+    createUniPin();
 }
 
 
