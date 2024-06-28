@@ -50,7 +50,7 @@ function formatDistanceString(distance, name) {
     switch (true) {
         case distance > 800.0:
             text = `The distance between ${name} and the University of Trier is ${distance.toFixed(2)} km. ` +
-                'I expect you too come from far away. Nice that you found the University of Trier. You want to learn German: ' +
+                'I expect you too come from far away. Nice that you found the University of Trier. You want to learn first german? - ' +
                 'Schreib dich ein!'
             break;
         case distance > 200.0:
@@ -63,7 +63,7 @@ function formatDistanceString(distance, name) {
             break;
         case distance > 10.0:
             text += 'Das ist gar nicht so weit weg. Du kannst bei deinen Eltern wohnen und trotzdem in Trier studieren. ' +
-                'Oder du ziehst gleich in die älteste Stadt deutschlands. Am besten gleich einschreiben.'
+                'Oder du ziehst gleich in die älteste Stadt deutschlands. Am besten sofort einschreiben.'
             break;
         case distance <= 10.0:
             text += 'Du wohnst ja quasi in Trier. Schreibe dich am besten gleich ein.'
@@ -91,9 +91,9 @@ function createUniPin() {
     let UniPin = L.icon({
         iconUrl: '/fileadmin/logo/LogoPin.png',
 
-        iconSize: [38, 61], // size of the icon
-        iconAnchor: [22, 60], // point of the icon which will correspond to marker's location
-        popupAnchor: [-3, -50] // point from which the popup should open relative to the iconAnchor
+        iconSize: [38, 61],
+        iconAnchor: [22, 60],
+        popupAnchor: [-3, -50]
     });
     L.marker([lat1, lon1], {icon: UniPin}).addTo(osm_347).bindPopup("Universität Trier");
 }
