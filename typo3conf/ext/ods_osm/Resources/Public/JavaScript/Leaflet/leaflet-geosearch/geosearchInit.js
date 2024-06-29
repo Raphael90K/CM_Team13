@@ -52,7 +52,7 @@ function formatDistanceString(distance, name) {
     switch (true) {
         case distance > 800.0:
             text = `The distance between ${name} and the University of Trier is ${distance.toFixed(2)} km. ` +
-                'I expect you too come from far away. Nice that you found the University of Trier. You want to learn first german? - ' +
+                'I expect you to come from far away. Nice that you found the University of Trier. You want to learn first german? - ' +
                 'Schreib dich ein!'
             break;
         case distance > 200.0:
@@ -77,6 +77,7 @@ function formatDistanceString(distance, name) {
 }
 
 let line
+
 function processLocation(ev) {
     if (line != null) {
         osm_347.removeLayer(line)
@@ -110,9 +111,30 @@ function createUniPin() {
     L.marker([latUni, lonUni], {icon: UniPin}).addTo(osm_347).bindPopup("Universität Trier");
 }
 
+function initTileLayer() {
+
+    let osm = L.tileLayer.provider('OpenStreetMap.DE')
+    let openTopoMap = L.tileLayer.provider('OpenTopoMap')
+    let EsriWorldImagery = L.tileLayer.provider('Esri.WorldImagery');
+    let EsriWorldStreetMap = L.tileLayer.provider('Esri.WorldStreetMap');
+    let opnvKarte = L.tileLayer.provider('OPNVKarte');
+
+
+    let baseMaps = {
+        "OpenStreetMap": osm,
+        "OpenTopoMap": openTopoMap,
+        "EsriWorldImagery": EsriWorldImagery,
+        "EsriWorldStreetMap": EsriWorldStreetMap,
+        "ÖPNVKarte" : opnvKarte
+    };
+    osm.addTo(osm_347);
+    let layerControl = L.control.layers(baseMaps).setPosition('topright').addTo(osm_347);
+}
+
 function initGeosearch() {
     osm_347.addControl(search);
     osm_347.on('geosearch/showlocation', processLocation);
+    initTileLayer()
     createUniPin();
 }
 
