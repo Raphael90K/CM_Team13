@@ -21,3 +21,9 @@ const schemaJSON = {
     ]
 }
 
+document.addEventListener('DOMContentLoaded', ev => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaJSON);
+    document.head.appendChild(script);
+});
