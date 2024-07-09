@@ -2,46 +2,58 @@
     <h3 class="element-header mb-3">
         <span>Auf einen Blick:</span>
     </h3>
-
-    <p><strong>Studiengang: </strong>
+    <p>
+        <strong>Studiengang: </strong>
         <f:if condition="{data.tx_mask_studiengang}">
             {data.tx_mask_studiengang -> f:format.nl2br()}
         </f:if>
     </p>
-    <p><strong>Abschluss: </strong>
+    <p>
+        <strong>Abschluss: </strong>
         <f:if condition="{data.tx_mask_abschluss}">
             {data.tx_mask_abschluss -> f:format.nl2br()}
         </f:if>
     </p>
-    <p><strong>Art: </strong>
+    <p>
+        <strong>Art: </strong>
         <f:if condition="{data.tx_mask_art}">
             {data.tx_mask_art -> f:format.nl2br()}
         </f:if>
     </p>
-    <p><strong>ECTS (Leistungspunkte): </strong>
+    <p>
+        <strong>Regelstudienzeit: </strong>
         <f:if condition="{data.tx_mask_regelstudienzeit}">
             {data.tx_mask_regelstudienzeit -> f:format.nl2br()}
         </f:if>
     </p>
-    <p><strong>Zulassungsbeschränkung: </strong>
+    <p>
+        <strong>ECTS (Leistungspunkte): </strong>
         <f:if condition="{data.tx_mask_ects}">
             {data.tx_mask_ects -> f:format.nl2br()}
         </f:if>
     </p>
-    <p><strong>Studienbeginn: </strong>
+    <p>
+        <strong>Zulassungsbeschränkung: </strong>
+        <f:if condition="{data.tx_mask_zulasssungsbeschraenkung}">
+            {data.tx_mask_zulasssungsbeschraenkung -> f:format.nl2br()}
+        </f:if>
+    </p>
+    <p>
+        <strong>Studienbeginn: </strong>
         <f:if condition="{data.tx_mask_studienbeginn}">
             {data.tx_mask_studienbeginn -> f:format.nl2br()}
         </f:if>
     </p>
-    <p><strong>Bewerbungsfrist: </strong>
+    <p>
+        <strong>Bewerbungsfrist: </strong>
         <f:if condition="{data.tx_mask_bewerbungsfrist}">
             {data.tx_mask_bewerbungsfrist -> f:format.nl2br()}
         </f:if>
     </p>
-    <p><strong>Unterrichtssprache: </strong>
+    <p>
+        <strong>Unterrichtssprache: </strong>
         <f:if condition="{data.tx_mask_unterrichtssprache}">
             {data.tx_mask_unterrichtssprache -> f:format.nl2br()}
         </f:if>
     </p>
-
 </div>
