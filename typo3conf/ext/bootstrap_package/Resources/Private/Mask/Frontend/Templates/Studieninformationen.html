@@ -112,8 +112,8 @@
         const art = document.getElementById("art").textContent.trim().split('|').map(item => item.trim());
         const regelstudienzeit = document.getElementById("regelstudienzeit").textContent.trim();
         const ects = document.getElementById("ects").textContent.trim().split('|').map(item => item.trim());
-        const zulassungsbeschraenkung = document.getElementById("zulassungsbeschraenkung").textContent.trim().split(',').map(item => item.trim());
-        const studienbeginn = document.getElementById("studienbeginn").textContent.trim().split('und').map(item => item.trim());
+        const zulassungsbeschraenkung = document.getElementById("zulassungsbeschraenkung").textContent.trim().split('|').map(item => item.trim());
+        const studienbeginn = document.getElementById("studienbeginn").textContent.trim().split('|').map(item => item.trim());
         const bewerbungsfrist = document.getElementById("bewerbungsfrist").textContent.trim().split('|').map(item => item.trim());
         const unterrichtssprache = document.getElementById("unterrichtssprache").textContent.trim();
 
