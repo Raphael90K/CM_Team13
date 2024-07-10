@@ -139,4 +139,4 @@ function initGeosearch() {
 }
 
 
-document.addEventListener('DOMContentLoaded', setTimeout(initGeosearch, 100));
+document.addEventListener('DOMContentLoaded', (ev) => setTimeout(initGeosearch, 100));
