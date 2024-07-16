@@ -51,7 +51,7 @@ function formatDistanceString(distance, name) {
     let text = `Die Distanz zwischen ${name} und der Universität Trier beträgt ca. <b>${distance.toFixed(2)}</b> km. `
     switch (true) {
         case distance > 800.0:
-            text = `The distance between ${name} and the University of Trier is ${distance.toFixed(2)} km. ` +
+            text = `The distance between ${name} and the University of Trier is <b>${distance.toFixed(2)}</b> km. ` +
                 'I expect you to come from far away. Nice that you found the University of Trier. You want to learn first german? - ' +
                 'Schreib dich ein!'
             break;
